@@ -9,7 +9,7 @@ OUTPUT_FILENAME="$2"
 if [ "$#" -ne 2 ]; then
     echo "Illegal number of parameters"
     echo ""
-    echo "Usage: $0 [input_file] [output_file.mkv]"
+    echo "Usage: $0 input_file output_file.mkv"
     exit 1
 fi
 if ! [ -f $INPUT ]; then

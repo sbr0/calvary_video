@@ -22,12 +22,4 @@ LOG_FILE="$LOG_DIR"/"$DATE".log
 cp -n "$LOG_FILE" /tmp/calv_parse.log
 "$SCRIPT_DIR"/curl.sh "vp9_alpha_$DATE.mkv" /tmp/calv_parse.log 2>&1 | tee -a "$LOG_FILE"
 
-# green screen version no longer needed as vp9 transparency works better
-
-# DATE=$(date +"%Y-%m-%d_%H-%M")
-# LOG_FILE="$LOG_DIR"/"$DATE".log
-# "$SCRIPT_DIR"/green_convert.sh "$INPUT_VIDEO" "green_H264_$DATE.mp4" 2>&1 | tee "$LOG_FILE"
-# cp -n "$LOG_FILE" /tmp/calv_parse.log
-# "$SCRIPT_DIR"/curl.sh "green_H264_$DATE.mp4" /tmp/calv_parse.log 2>&1 | tee -a "$LOG_FILE"
-
 kill -9 "$PPID"
